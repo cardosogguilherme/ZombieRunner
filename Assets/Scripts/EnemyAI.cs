@@ -32,4 +32,10 @@ public class EnemyAI : MonoBehaviour
         }
         Debug.Log($"destination is: {target.position}");
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
+    }
 }
