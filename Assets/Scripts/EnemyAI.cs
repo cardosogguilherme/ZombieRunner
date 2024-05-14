@@ -11,26 +11,50 @@ public class EnemyAI : MonoBehaviour
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
+    bool isProvoked = false;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        Debug.Log($"navMeshAgent is: {navMeshAgent}");
+        // Debug.Log($"navMeshAgent is: {navMeshAgent}");
     }
 
     void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
-        if (distanceToTarget <= chaseRange)
+        if (isProvoked)
         {
-            navMeshAgent.SetDestination(target.position);
+            EngageTarget();
         }
-        else
+        else if (distanceToTarget <= chaseRange)
         {
-            navMeshAgent.SetDestination(transform.position);
+            isProvoked = true;
         }
-        Debug.Log($"destination is: {target.position}");
+        // Debug.Log($"destination is: {target.position}");
+    }
+
+    private void EngageTarget()
+    {
+        if (distanceToTarget >= navMeshAgent.stoppingDistance)
+        {
+            ChaseTarget();
+        }
+
+        if (distanceToTarget <= navMeshAgent.stoppingDistance)
+        {
+            AttackTarget();
+        }
+    }
+
+    private void AttackTarget()
+    {
+        Debug.Log("Attacked the player");
+    }
+
+    private void ChaseTarget()
+    {
+        navMeshAgent.SetDestination(target.position);
     }
 
     private void OnDrawGizmosSelected()
