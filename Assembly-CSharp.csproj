@@ -78,6 +78,7 @@
   <ItemGroup>
     <None Include="Assets\StarterAssets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
     <None Include="Assets\StarterAssets\license.txt" />
+    <None Include="Assets\Asset Packs\Survival Carbine\Thanks To Michael.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
