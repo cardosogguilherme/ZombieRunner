@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] Camera FPCamera;
     [SerializeField] float range = 100f;
+    [SerializeField] float damage = 25f;
 
     void Update()
     {
@@ -19,8 +20,13 @@ public class Weapon : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
-        Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range);
 
-        Debug.Log($"I hit this thing: {hit.transform.name}");
+        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
+        {
+            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+            target?.TakeDamage(damage);
+
+            Debug.Log($"I hit this thing: {hit.transform.name} and have {target?.GetHealth()} HP left");
+        }
     }
 }
