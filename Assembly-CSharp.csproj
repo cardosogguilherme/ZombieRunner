@@ -101,6 +101,7 @@
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Utility\SimpleMouseRotator.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Cameras\Scripts\AbstractTargetFollower.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Cameras\Scripts\AutoCam.cs" />
+    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Characters\RollerBall\Scripts\Ball.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Environment\Water\Water\Scripts\SpecularLighting.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\ParticleSystems\Scripts\WaterHoseParticles.cs" />
