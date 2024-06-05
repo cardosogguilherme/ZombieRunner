@@ -18,7 +18,6 @@ public class EnemyAI : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        // Debug.Log($"navMeshAgent is: {navMeshAgent}");
     }
 
     void Update()
@@ -33,7 +32,6 @@ public class EnemyAI : MonoBehaviour
         {
             isProvoked = true;
         }
-        // Debug.Log($"destination is: {target.position}");
     }
 
     private void EngageTarget()

@@ -94,6 +94,7 @@
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Utility\FOVKick.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Utility\WaypointProgressTracker.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Environment\Water\Water\Scripts\Displace.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\ParticleSystems\Scripts\ExtinguishableParticleSystem.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\ParticleSystems\Scripts\SmokeParticles.cs" />
