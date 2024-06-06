@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 5420857361349278248}
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 7662729173143710633}
+  - component: {fileID: 6830935244935475674}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -413,6 +414,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 60
+--- !u!114 &6830935244935475674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf80287633c8b24eb751ad999b25fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &681173321317278828
 PrefabInstance:
   m_ObjectHideFlags: 0
