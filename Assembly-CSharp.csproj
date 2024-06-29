@@ -93,6 +93,7 @@
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Cameras\Scripts\PivotBasedCameraRig.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\Scripts\WeaponZoom.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\CrossPlatformInput\Scripts\MobileControlRig.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
