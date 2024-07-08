@@ -183,6 +183,7 @@
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Environment\Water\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\CrossPlatformInput\Scripts\Joystick.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Utility\ForcedReset.cs" />
+    <Compile Include="Assets\Scripts\Ammo.cs" />
     <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets 1\Environment\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
