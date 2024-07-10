@@ -9,12 +9,62 @@ public class WeaponSwitcher : MonoBehaviour
 
     void Start()
     {
-        SetWeaponActive();
+        SetWeaponActive(currentWeapon);
     }
 
-    private void SetWeaponActive()
+    void Update()
     {
-        int weaponIndex = 0;
+        int previousWeapon = currentWeapon;
+
+        ProcessKeyInput();
+        ProcessScroolWheel();
+
+        if (previousWeapon != currentWeapon)
+        {
+            SetWeaponActive(currentWeapon);
+        }
+    }
+
+    private void ProcessScroolWheel()
+    {
+        if (Input.mouseScrollDelta.y > 0)
+        {
+            currentWeapon = currentWeapon == 0 ? transform.childCount - 1 : currentWeapon - 1;
+        }
+        else if (Input.mouseScrollDelta.y < 0)
+        {
+            currentWeapon = currentWeapon == transform.childCount - 1 ? 0 : currentWeapon + 1;
+        }
+
+        SetWeaponActive(currentWeapon);
+    }
+
+    private void ProcessKeyInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentWeapon = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentWeapon = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentWeapon = 2;
+        }
+
+        SetWeaponActive(currentWeapon);
+    }
+
+    private void SetWeaponActive(int weaponIndex)
+    {
+        if (weaponIndex > transform.childCount - 1)
+        {
+            weaponIndex = 0;
+        }
 
         foreach (Transform weapon in transform)
         {
@@ -23,9 +73,4 @@ public class WeaponSwitcher : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
